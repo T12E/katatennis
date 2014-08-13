@@ -31,7 +31,7 @@ func createScore(player1, player2 int) {
 func TestNewGameReturns00(t *testing.T) {
 	setup()
 
-	assertScore(t, "15-00")
+	assertScore(t, "00-00")
 }
 
 func TestPlayerOneScores(t *testing.T) {
