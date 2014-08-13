@@ -31,7 +31,7 @@ func createScore(player1, player2 int) {
 func TestNewGameReturns00(t *testing.T) {
 	setup()
 
-	assertScore(t, "00-00")
+	assertScore(t, "15-00")
 }
 
 func TestPlayerOneScores(t *testing.T) {
@@ -71,7 +71,7 @@ func TestAdvantagePlayerOne(t *testing.T) {
 
 	createScore(4, 3)
 
-	assertScore(t, "ADV " + playerOneName)
+	assertScore(t, "ADV "+playerOneName)
 }
 
 func TestAdvantagePlayerTwo(t *testing.T) {
@@ -79,7 +79,7 @@ func TestAdvantagePlayerTwo(t *testing.T) {
 
 	createScore(6, 7)
 
-	assertScore(t, "ADV " + playerTwoName)
+	assertScore(t, "ADV "+playerTwoName)
 }
 
 func TestDeuce(t *testing.T) {
@@ -103,7 +103,7 @@ func TestVictoryPlayerOne(t *testing.T) {
 
 	createScore(4, 2)
 
-	assertScore(t,playerOneName + " win")
+	assertScore(t, playerOneName+" win")
 }
 
 func TestVictoryPlayerTwo(t *testing.T) {
@@ -111,5 +111,5 @@ func TestVictoryPlayerTwo(t *testing.T) {
 
 	createScore(5, 7)
 
-	assertScore(t,playerTwoName + " win")
+	assertScore(t, playerTwoName+" win")
 }
