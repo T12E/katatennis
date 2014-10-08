@@ -13,6 +13,7 @@ func setup() {
 }
 
 func assertScore(t *testing.T, expected string) {
+	t.Fail()
 	s := g.Score()
 	if s != expected {
 		t.Errorf("Unexpected score %s, expected %s", s, expected)
@@ -71,7 +72,7 @@ func TestAdvantagePlayerOne(t *testing.T) {
 
 	createScore(4, 3)
 
-	assertScore(t, "ADV " + playerOneName)
+	assertScore(t, "ADV "+playerOneName)
 }
 
 func TestAdvantagePlayerTwo(t *testing.T) {
@@ -79,7 +80,7 @@ func TestAdvantagePlayerTwo(t *testing.T) {
 
 	createScore(6, 7)
 
-	assertScore(t, "ADV " + playerTwoName)
+	assertScore(t, "ADV "+playerTwoName)
 }
 
 func TestDeuce(t *testing.T) {
@@ -103,7 +104,7 @@ func TestVictoryPlayerOne(t *testing.T) {
 
 	createScore(4, 2)
 
-	assertScore(t,playerOneName + " win")
+	assertScore(t, playerOneName+" win")
 }
 
 func TestVictoryPlayerTwo(t *testing.T) {
@@ -111,5 +112,5 @@ func TestVictoryPlayerTwo(t *testing.T) {
 
 	createScore(5, 7)
 
-	assertScore(t,playerTwoName + " win")
+	assertScore(t, playerTwoName+" win")
 }
