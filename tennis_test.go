@@ -13,7 +13,6 @@ func setup() {
 }
 
 func assertScore(t *testing.T, expected string) {
-	t.Fail()
 	s := g.Score()
 	if s != expected {
 		t.Errorf("Unexpected score %s, expected %s", s, expected)
